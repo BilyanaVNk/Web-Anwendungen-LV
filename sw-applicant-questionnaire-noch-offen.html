@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profil vervollständigen</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="sw-styles.css">
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+			<!-- Hier beginnt der Inhalt, das ist nur ein Beispielformular -->
+		<form action="" method="get">
+			<input type="hidden" name="id" value="23456">
+			
+			<label>
+				Vorname<br>
+				<input type="text" name="vorname" value="Vorname">
+			</label>
+			
+			<br><br>
+			
+			<label>
+				Nachname<br>
+				<input type="text" name="nachname" placeholder="Bitte eingeben!">
+			</label>
+			
+			<br><br>
+			
+			Geschlecht:
+			
+			<br>
+			
+			<label>
+				<input type="radio" name="geschlecht" value="w">
+				weiblich
+			</label>
+			
+			<label>
+				<input type="radio" name="geschlecht" value="m">
+				männlich
+			</label>
+			
+			<label>
+				<input type="radio" name="geschlecht" value="d">
+				divers
+			</label>
+			
+			<br><br>
+			
+			<label>
+				Zahlungsmethode
+				<select name="zahlungsmethode">
+					<option value="kreditkarte">Kreditkarte</option>
+					<option value="bar">Barzahlung</option>
+				</select>
+			</label>
+			
+			<br><br>
+			
+			<label>
+				Eigenschaften
+				<select name="eigenschaften" size="8" multiple>
+					<optgroup label="Gut">
+						<option value="intelligent">intelligent</option>
+						<option value="sparsam">sparsam</option>
+						<option value="freundlich">freundlich</option>
+					</optgroup>
+					<optgroup label="Schlecht">
+						<option value="verschlagen">verschlagen</option>
+						<option value="hinterlistig">hinterlistig</option>
+						<option value="scheinheilig">scheinheilig</option>
+					</optgroup>
+				</select>
+			</label>
+				
+			<br><br>
+			
+			<label>
+				Anmeldung zum Newsletter?
+				<input type="checkbox" name="newsletter" value="ja" checked>
+			</label>
+			
+			<br><br>
+			
+			<label>
+				Password<br>
+				<input name="password" type="password" placeholder="Bitte 6 Zeichen">
+			</label>
+			
+			<br><br>
+			
+			<button>Absenden</button>
+		</form>
+	</main>
+	<div id="footer"></div>
+
+	<script>
+		document.getElementById("header").innerHTML = fetch("header.html").then(res => res.text());
+		document.getElementById("footer").innerHTML = fetch("footer.html").then(res => res.text());
+	</script>
+</body>
+</html>

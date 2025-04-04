@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Startseite</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="sw-styles.css">
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <h1>Willkommen bei SheWorks!</h1>
+			<p>Du möchtest flexibel arbeiten und dabei gut verdienen? Du willst deine Expertise einbringen und das bei voller Flexibilität? Dann komm zu uns.</p>
+        </main>
+        <div id="footer"></div>
+
+        <script>
+            // Header und Footer laden
+            document.getElementById("header").innerHTML = fetch("header.html").then(res => res.text());
+            document.getElementById("footer").innerHTML = fetch("footer.html").then(res => res.text());
+        </script>
+    </body>
+</html>

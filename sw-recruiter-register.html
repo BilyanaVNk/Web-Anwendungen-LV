@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registrierung bei SheWorks - Unternehmen</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="sw-styles.css">
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <form action="" method="get">
+                <label for="Unternehmensname">Unternehmensname</label>
+                <input type="text" id="Unternehmensname" name="Unternehmensname" placeholder="Unternehmensname">
+
+                <label for="Kontaktperson">Kontaktperson</label>
+                <input type="text" id="Kontaktperson" name="Kontaktperson" placeholder="Vor- und Nachname">
+
+                <label for="e-mail">Mail</label>
+                <input type="email" id="e-mail" name="e-mail" placeholder="test@unternehmen.com">
+
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" name="phone" placeholder="0664 32 34 848">
+
+                <p>Branche</p>
+                <label>
+                    <input type="radio" name="branche" value="IT">
+                    IT-Unternehmen
+                </label>
+
+                <label>
+                    <input type="radio" name="branche" value="Finance">
+                    Banken & Versicherungen
+                </label>
+
+                <label>
+                    <input type="radio" name="branche" value="Einzelhandel">
+                    Einzelhandel
+                </label>
+
+                <label>
+                    <input type="radio" name="branche" value="Gesundheit">
+                    Sozial- und Gesundheitswesen
+                </label>
+
+                <label>
+                    <input type="radio" name="branche" value="Anderes">
+                    Anderes
+                </label>
+
+                <button type="submit">Absenden</button>
+            </form>
+        </main>
+        <div id="footer"></div>
+
+        <script>
+            fetch("header.html")
+                .then(res => res.text())
+                .then(data => document.getElementById("header").innerHTML = data);
+
+            fetch("footer.html")
+                .then(res => res.text())
+                .then(data => document.getElementById("footer").innerHTML = data);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registrierung bei SheWorks - Unternehmen</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="sw-styles.css">
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+<!-- Hier beginnt der Inhalt, das ist nur Beispielinhalt -->
+
+			<h1>Als Unternehmen registrieren</h1>
+			<p>das ist text</p>
+
+		</main>
+        <div id="footer"></div>
+
+        <script>
+            document.getElementById("header").innerHTML = fetch("header.html").then(res => res.text());
+            document.getElementById("footer").innerHTML = fetch("footer.html").then(res => res.text());
+        </script>
+    </body>
+</html>
